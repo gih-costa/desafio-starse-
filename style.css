@@ -45,11 +45,10 @@ p {
 }
 .section-title {
     font-size: 4rem;
-    font-weight: 500;
+    font-weight: bold;
     color: white;
     margin-bottom: 10px;
     margin-top: 5px;
-    letter-spacing: 0.2rem;
     text-align: center;
 }
 
@@ -202,6 +201,7 @@ align-items: center;
 #about p{
     color: white;
     font-size: 1.4rem;
+    margin: 0 10rem 0 0rem;
 }
 
 /* Seção de Portfólio */
@@ -214,14 +214,61 @@ align-items: center;
     flex-direction: column;
     max-width: 1200px;
     margin: 0 auto;
-    padding: 100px 0;
+    padding: 50px 0;
 
 }
-#portfolio .portfolio-header h1{
-    margin-bottom: 50px;
 
-    
+/* #portfolio .portfolio-header h1{
+    margin-bottom: 50px; 
+} */
+
+
+#cards{
+display: flex;
+justify-content: space-between;
+gap: 2rem;
+text-align: center;
 }
+
+
+#cards img{
+    width: 100%;
+    height: 20rem;
+    position: relative;
+
+}
+
+
+.card{
+background-color: white;
+border-radius: 7px;
+padding: 2rem;
+transition: all 1s;
+    cursor: pointer;
+}
+
+.card:hover{
+    -webkit-transform: scale(0.5);
+    transform: scale(1.05);
+}
+
+
+#cards h1{
+    color: #5B0FD7;
+}
+
+#cards h2{
+    color: #070012;
+}
+
+#cards p{
+    color: #070012;
+}
+
+#portfolio .project-img img{
+    transition: 0.5s ease transform;
+}
+
 #portfolio .all-projects {
     display: flex;
     align-items: center;
