@@ -15,10 +15,15 @@ html{
 a{
     text-decoration: none;
 }
-img{
+/* img{
     height: 100%;
     width: 100%;
     object-fit: cover;
+} */
+
+h1{
+    color: white;
+    font-size: 2.8rem;
 }
 p {
     font-size: 1.4rem;
@@ -26,41 +31,79 @@ p {
     line-height: 2.5rem;
     font-weight: 200;
     letter-spacing: 0.05rem;
+    color: white;
+
 }
 
 .container{
-    min-height: 100vh;
+    min-height: 75vh;
     width: 100%;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
+    margin: 0 10rem;;
 }
 .section-title {
     font-size: 4rem;
     font-weight: 500;
-    color: black;
+    color: white;
     margin-bottom: 10px;
     margin-top: 5px;
-    text-transform: uppercase;
     letter-spacing: 0.2rem;
     text-align: center;
 }
 
+/* Header */
+#header {
+    display: flex;
+    padding: 2.5rem;
+    background-color: #0F0126;
+    justify-content: space-between;
+    border-bottom: 2px solid rgba(227, 227, 227, 20%);
+    
+}
 
+.logo{
+    color: white;
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+.logo span {
+    color: #5B0FD7;
+}
+/* Navigation */
+
+#menu {
+    display: flex;
+    list-style: none;
+    gap: 3.4rem;
+    align-items: center;
+}
+
+nav ul li a{
+    color: white;
+    font-size: 1.6rem;    
+}
+
+#btn-mobile {
+    display: none;
+}
 
 /* Seção de apresentação */
+#presentation.container{
+display: flex;
+}
 
 #presentation{
-    background-image: url(./background.jpeg);
-    background-size: cover;
-    background-position: top center;
-    position: relative;
-    z-index: 1;
+    background: #0F0126;
+    display: flex;
 }
+
 #presentation h1{
     display: block;
     width: fit-content;
-    font-size: 5rem;
+    font-size: 4rem;
     position: relative;
     color: transparent;
     animation: text_reveal .5s ease forwards;
@@ -76,13 +119,33 @@ p {
     animation: text_reveal_name .5s ease forwards;
     animation-delay: 2.8s;
 }
+
+#presentation p {
+    white-space: nowrap;
+    overflow: hidden;
+    color: white;
+    font-size: 2rem;
+}
+
+.typing-animation{
+    animation: typing 1.5s steps(60) 0.5s normal ;
+}
+
+@keyframes typing {
+    from{
+        width: 0;
+    }
+    to{
+        width: 20em;
+    }
+}
+
 #presentation .cta{
     display: inline-block;
-    padding: 10px 30px;
-    color: gold;
-    background-color: transparent;
-    border: 2px solid gold;
-    font-size: 2rem;
+    padding: 10px 20px;
+    color: white;
+    background-color: #5B0FD7;
+    font-size: 1.6rem;
     text-transform: uppercase;
     letter-spacing: .1rem;
     margin-top: 20px;
@@ -93,7 +156,7 @@ p {
 #presentation .cta:hover{
     color: white;
     font-weight: 500;
-    background-color: gold;
+    background-color: #8f53f7;
 }
 #presentation h1 span{
     position: absolute;
@@ -103,7 +166,7 @@ p {
     width: 0%;
     animation: text_reveal_box 1s ease;
     animation-delay: .5s;
-    background-color: gold;
+    background-color: #5B0FD7;
 }
 #presentation h1:nth-child(1) span{
     animation-delay: .5s;
@@ -125,17 +188,39 @@ p {
     opacity: 0.5;
     z-index: -1;
 }
+/* Seção Sobre mim */
+#about{
+background-color: #0F0126;
+display: flex;
+align-items: center;
+}
 
-/* Seção de Portifólio */
+#about img{
+   position: relative;
+}
+
+#about p{
+    color: white;
+    font-size: 1.4rem;
+}
+
+/* Seção de Portfólio */
+
+#portfolio {
+    background-color: #0F0126;
+}
 
 #portfolio .portfolio{
     flex-direction: column;
     max-width: 1200px;
     margin: 0 auto;
     padding: 100px 0;
+
 }
 #portfolio .portfolio-header h1{
     margin-bottom: 50px;
+
+    
 }
 #portfolio .all-projects {
     display: flex;
@@ -201,6 +286,20 @@ p {
     transform: scale(1.1);
 }
 
+/* Footer */
+#footer{
+    background-color:#0F0126;
+    display: flex;
+    justify-content: space-between;
+    border-top: 2px solid #070012;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+
+}
+.teste, .redes {
+    margin: 0 5rem;
+
+}
 /* Keyframes */
 
 @keyframes text_reveal{
@@ -227,6 +326,35 @@ p {
 }
 
 /* Media Query */
+@media (max-width: 600px) {
+    #btn-mobile {
+        display: block;
+    }
+    #menu{
+        display: block;
+        position: absolute;
+        width: 100%;
+        top: 70px;
+        right: 0px;
+        background: rgb(36, 2, 68);
+      z-index:1000;
+          /* transition: .6s;
+        visibility: hidden;
+        overflow-y: auto; */
+
+    }
+    #nav.active #menu{
+        height: calc(100vh-70px);
+        visibility: visible;
+        overflow-y: auto;
+    }
+    #menu a {
+        padding: 1rem 0;
+        margin: 0 1rem;
+        border-bottom: 1px solid rgba(0, 0, 0, .05)
+    }
+}
+
 @media only screen and (min-width: 768px) {
     #portfolio .project-item {
         flex-direction: row;

@@ -5,25 +5,62 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Site daora demais</title>
+    <title>Portfólio - Gislaine</title>
 </head>
 
 <body>
-    <section id="presentation">
-        <div class="presentation container">
-            <div>
-                <h1>Olá,<span></span></h1>
-                <h1>meu nome é<span></span></h1>
-                <h1>Gabriel<span></span></h1>
-                <a href="#portfolio" type="button" class="cta">Portifólio</a>
+    <header id="header">
+        <a class="logo" href="#"> <span>
+                < </span>Gih<span>/></span>
+        </a>
+        <nav id="nav">
+            <button id="btn-mobile">Menu</button>
+            <ul id="menu">
+                <li><a class="title" href="#">Início</a></li>
+                <li><a class="title" href="#">Quem sou</a></li>
+                <li><a class="title" href="#">Projetos</a></li>
+                <li><a class="title" href="#">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="presentation">
+            <div class="presentation container">
+                <div>
+                    <p>Olá, eu sou</p>
+                    <h1>Gislaine Costa<span></span></h1>
+                    <p class="typing-animation">Front-end developer e UI Design<span></span></p>
+                    <a href="#portfolio" type="button" class="cta">Portfólio</a>
+                </div>
+
+                <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+                <lottie-player src="https://assets10.lottiefiles.com/packages/lf20_boginvi1.json"
+                    background="transparent" speed="1" style="width: 300px; height: 300px;" loop autoplay>
+                </lottie-player>
             </div>
+        </section>
+    </main>
+
+    <section id="about">
+        <div class="teste container">
+            <img class="img" src="./images/girl.png" alt="">
+        </div>
+        <div class="text">
+            <h1>Quem sou eu?</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus laborum odio et ex ab quasi
+                perspiciatis, natus, iure dolor mollitia deserunt autem ipsam optio voluptatibus repudiandae molestiae
+                at. Obcaecati, voluptatem? lore</p>
         </div>
     </section>
 
     <section id="portfolio">
         <div class="portfolio container">
             <div class="portfolio header">
-                <h1 class="section-title"><span>Portifólio</span></h1>
+                <h1 class="section-title"><span>Meus projetos</span></h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos, nemo ullam. Placeat amet temporibus
+                    distinctio mollitia vel, ullam tenetur asperiores porro consectetur nihil molestiae reprehenderit
+                    deserunt deleniti nam. Obcaecati, dolor!</p>
             </div>
             <div class="all-projects">
                 <div class="project-item">
@@ -81,5 +118,21 @@
             </div>
         </div>
     </section>
-</body>
+
+
+    <footer id="footer">
+        <div class="teste">
+            <a class="logo" href="#"> <span>
+                    < </span>Gih<span>/></span>
+            </a>
+            <p>2022 Gislaine Costa</p>
+            <p>Todos os direitos reservados.</p>
+        </div>
+        <div class="redes">
+            <img src="./images/linkedin.png" alt="">
+            <img src="./images/ic_outline-email.png" alt="">
+        </div>
+    </footer>
+    <script src="./script.js"></script>
+
 </html>
