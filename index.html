@@ -4,23 +4,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
     <title>Portfólio - Gislaine</title>
 </head>
 
 <body>
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
     <header id="header">
         <a class="logo" href="#"> <span>
                 < </span>Gih<span>/></span>
         </a>
         <nav id="nav">
-            <button id="btn-mobile">Menu</button>
+            <input type="checkbox" id="checkbox-menu">
+            <label for="checkbox-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
 
             <ul id="menu">
                 <li><a class="title" href="#">Início</a></li>
-                <li><a class="title" href="#">Quem sou</a></li>
-                <li><a class="title" href="#">Projetos</a></li>
-                <li><a class="title" href="#">Contato</a></li>
+                <li><a class="title" href="#about">Quem sou</a></li>
+                <li><a class="title" href="#portfolio">Projetos</a></li>
             </ul>
         </nav>
     </header>
@@ -28,15 +34,14 @@
     <main>
         <section id="presentation">
             <div class="presentation container">
-                <div>
+                <div class="presentation-content">
                     <p>Olá, eu sou</p>
                     <h1>Gislaine Costa<span></span></h1>
-                    <p class="typing-animation">Front-end developer e UI Design<span></span></p>
+                    <p class="typing-animation">Front-end developer e UI Designer</p>
                     <a href="#portfolio" type="button" class="cta">Portfólio</a>
                 </div>
 
-                <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
-                <lottie-player src="https://assets10.lottiefiles.com/packages/lf20_boginvi1.json"
+                <lottie-player class="animation" src="https://assets10.lottiefiles.com/packages/lf20_boginvi1.json"
                     background="transparent" speed="1" style="width: 300px; height: 300px;" loop autoplay>
                 </lottie-player>
             </div>
@@ -44,14 +49,19 @@
     </main>
 
     <section id="about">
-        <div class="about container">
-            <img class="img" src="./images/girl.png" alt="">
+        <div class="about">
+            <img class="img" src="./images/girl.png"
+                alt="Ilustração de uma mulher digitando no notebook perto de um gato">
         </div>
-        <div class="text">
-            <h1>Quem sou eu?</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus laborum odio et ex ab quasi
-                perspiciatis, natus, iure dolor mollitia deserunt autem ipsam optio voluptatibus repudiandae molestiae
-                at. Obcaecati, voluptatem? lore</p>
+        <div class="area-about-stacks">
+            <div class="text">
+                <h1 class="section-title">Quem sou eu?</h1>
+                <p>Meu nome é Gislaine, mas você pode me chamar de Gih. Sou freelancer como Front-end developer e UI
+                    Designer. Desenvolvo interfaces modernas e de alta qualidade, com foco em performance, animações e
+                    SEO.
+                </p>
+            </div>
+
         </div>
     </section>
 
@@ -60,10 +70,9 @@
         <div class="portfolio">
             <div class="portfolio header">
                 <h1 class="section-title"><span>Meus projetos</span></h1>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos, nemo ullam. Placeat amet
-                    temporibus
-                    distinctio mollitia vel, ullam tenetur asperiores porro consectetur nihil molestiae reprehenderit
-                    deserunt deleniti nam. Obcaecati, dolor!</p>
+                <p class="section-text">Confira a seguir alguns dos meus projetos como Front-end e UI Desing. Está
+                    sempre será uma área em desenvolvimento, pois sempre haverá um projetinho a ser feito. Então, volte
+                    sempre!</p>
             </div>
 
             <section id="cards">
@@ -93,7 +102,7 @@
                         <h2>React</h2>
                         <p class="title text--medium">
                             Este projeto incrível em React é sobre a família incrível dos estúdios Disney e foi
-                            feito de uma forma incrível
+                            feito de uma forma incrível.
                         </p>
                     </div>
                 </div>
@@ -106,82 +115,30 @@
                         <h1>Estudos StarSe</h1>
                         <h2>Html, CSS e JavaScript</h2>
                         <p class="title text--medium">
-                            Este projeto é uma trilha de estudos a partir do curso de programação para iniciantes da
+                            Este projeto é uma trilha de estudos baseada no curso de programação para iniciantes da
                             StarSe </p>
 
                     </div>
                 </div>
-
-
-                <!-- <div class="all-projects">
-                <div class="project-item">
-                    <div class="project-info">
-                        <h1>Beba água</h1>
-                        <h2>HTML, CSS e JavaScript</h2>
-                        <p>Este projeto é um jogo simples em que o objetivo é beber água para deixar o professor Gabriel
-                            feliz! </p>
-                    </div>
-                    <div class="project-img">
-                        <img src="./img-1.png" alt="img">
-                    </div>
-                </div>
-                <div class="project-item">
-                    <div class="project-info">
-                        <h1>Projeto 2</h1>
-                        <h2>Codar é vida</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec nec eros leo. Vestibulum
-                            aliquam vel libero eget porttitor. Nunc nisl nunc, suscipit quis quam ut, congue fermentum
-                            ipsum. In consectetur, leo a accumsan eleifend, tortor leo eleifend nunc, sed pulvinar neque
-                            urna vitae dui.</p>
-                    </div>
-                    <div class="project-img">
-                        <img src="./img-1.png" alt="img">
-                    </div>
-                </div>
-                <div class="project-item">
-                    <div class="project-info">
-                        <h1>Projeto 3</h1>
-                        <h2>Codar é amor</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec nec eros leo. Vestibulum
-                            aliquam vel libero eget porttitor. Nunc nisl nunc, suscipit quis quam ut, congue fermentum
-                            ipsum. In consectetur, leo a accumsan eleifend, tortor leo eleifend nunc, sed pulvinar neque
-                            urna vitae dui.</p>
-                    </div>
-                    <div class="project-img">
-                        <img src="./img-1.png" alt="img">
-                    </div>
-                </div>
-                <div class="project-item">
-                    <div class="project-info">
-                        <h1>Projeto 4</h1>
-                        <h2>Codar é gostoso demais</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec nec eros leo. Vestibulum
-                            aliquam vel libero eget porttitor. Nunc nisl nunc, suscipit quis quam ut, congue fermentum
-                            ipsum. In consectetur, leo a accumsan eleifend, tortor leo eleifend nunc, sed pulvinar neque
-                            urna vitae dui.</p>
-                    </div>
-                    <div class="project-img">
-                        <img src="./img-1.png" alt="img">
-                    </div>
-                </div>
-            </div> -->
         </div>
     </section>
 
 
     <footer id="footer">
-        <div class="teste">
+        <div class="footer">
             <a class="logo" href="#"> <span>
                     < </span>Gih<span>/></span>
             </a>
-            <p>2022 Gislaine Costa</p>
+            <p>2022 &copy Gislaine Costa</p>
             <p>Todos os direitos reservados.</p>
         </div>
         <div class="redes">
-            <img src="./images/linkedin.png" alt="">
-            <img src="./images/ic_outline-email.png" alt="">
+            <a href="https://www.linkedin.com/in/gislaine-costa-cerqueira/" target="_blank"><img
+                    src="./images/linkedin.png" alt=""></a>
+            <a href="mailto:gih.costa123@hotmail.com" target="_blank"><img src="./images/ic_outline-email.png"
+                    alt=""></a>
         </div>
     </footer>
-    <script src="./script.js"></script>
+
 
 </html>
